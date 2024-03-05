@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Bulletins</title>
+    <!-- Ajoutez ici vos liens vers les feuilles de style, scripts ou autres ressources nécessaires -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* Animation pour les éléments à faire défiler */
+        .animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .carousel-item.active .animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Première section -->
+            <div class="carousel-item active">
+                <div class="row animate">
+                    <div class="col-lg-4">
+                        <img src="assets/img/portfolio/notes.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="animate">L'application semble être un système de gestion de bulletins scolaires ou de notes d'étudiants en utilisant JavaFX.</p>
+                        <p class="animate">En résumé, ce code représente une partie d'une application JavaFX permettant de gérer les notes des étudiants, enregistrant les données dans une structure de type arborescent. La partie visuelle de l'application comporte différents panneaux (bulletin et moyenne) et des éléments d'interface utilisateur pour la saisie des données.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deuxième section -->
+            <div class="carousel-item">
+                <div class="row animate">
+                    <div class="col-lg-4">
+                        <img src="assets/img/portfolio/audit.png" class="img-fluid" alt="Audit de Code Symfony">
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="animate">Audit de Code Symfony</h2>
+                        <p class="animate">L'audit de code vise à évaluer la qualité globale du code.</p>
+                        <p class="animate">L'examen du code permet d'identifier les erreurs potentielles, les bugs, les problèmes de logique ou tout autre problème qui pourrait entraîner un comportement incorrect du programme. L'audit de code est une pratique importante dans le développement logiciel visant à garantir la qualité, la sécurité et la maintenabilité du code source, tout en favorisant la collaboration et l'amélioration continue au sein de l'équipe de développement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Troisième section -->
+            <div class="carousel-item">
+                <div class="row animate">
+                    <div class="col-lg-4">
+                        <img src="assets/img/portfolio/HelpOrt%20web.png" class="img-fluid" alt="HelpORT - Service Scolarité de l’ORT Montreuil (Java)">
+                    </div>
+                    <div class="col-lg-8">
+                        <h2 class="animate">HelpORT - Service Scolarité de l’ORT Montreuil</h2>
+                        <p class="animate">Le service Scolarité de l’ORT Montreuil souhaite offrir à ses étudiants, de la terminale au BAC+5, un service informatisé d’entraide purement pédagogique (aide aux devoirs, TP, ou bien à mieux comprendre un cours).</p>
+                        <p class="animate">Ce service, baptisé HelpORT, sera utilisé dans les locaux de ORT Montreuil. Le service scolarité encadrera les affectations des salles, en fonction de leur disponibilité, aux différents besoins d’entraide formulés.</p>
+                        <img src="assets/img/portfolio/HelpOrt%20java.png" class="img-fluid animate" alt="HelpORT - Service Scolarité de l’ORT Montreuil (Web)">
+                        <p class="animate">Ce service à informatiser vise à offrir une assistance personnalisée dans la ou les matières de leur choix.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Ajoutez ici d'autres informations ou éléments nécessaires -->
+
+<!-- Ajoutez la bibliothèque Bootstrap JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript pour l'animation -->
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+
+        // Activer les animations lors du changement de diapositive
+        $('.carousel').on('slide.bs.carousel', function () {
+            $('.carousel-item.active .animate').removeClass('active');
+        });
+
+        $('.carousel').on('slid.bs.carousel', function () {
+            $('.carousel-item.active .animate').addClass('active');
+        });
+    });
+</script>
+</body>
+
+</html>
